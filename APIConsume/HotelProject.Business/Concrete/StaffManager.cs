@@ -36,7 +36,7 @@ namespace HotelProject.Business.Concrete
             return _staffDal.GetByID(id);
         }
 
-        public List<Staff> TGetlist()
+        public List<Staff> TGetList()
         {
             return _staffDal.Getlist();
         }

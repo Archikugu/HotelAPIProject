@@ -35,7 +35,7 @@ namespace HotelProject.Business.Concrete
             return _testimonialDal.GetByID(id);
         }
 
-        public List<Testimonial> TGetlist()
+        public List<Testimonial> TGetList()
         {
             return _testimonialDal.Getlist();
         }

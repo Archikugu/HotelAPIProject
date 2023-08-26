@@ -36,7 +36,7 @@ namespace HotelProject.Business.Concrete
             return _subscribeDal.GetByID(id);
         }
 
-        public List<Subscribe> TGetlist()
+        public List<Subscribe> TGetList()
         {
             return _subscribeDal.Getlist();
         }
