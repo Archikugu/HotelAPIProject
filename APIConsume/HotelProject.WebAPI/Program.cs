@@ -38,6 +38,8 @@ builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 builder.Services.AddScoped<IRoomDal, EfRoomDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 
+builder.Services.AddAutoMapper(typeof(HotelProject.WebAPI.Mapping.AutoMapperConfig));
+
 
 
 var app = builder.Build();
