@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_DefaultHeadComponentPartial")
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        @await Component.InvokeAsync("_DefaultSpinnerComponentPartial")
+        <!-- Spinner End -->
+        <!-- Header Start -->
+        @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
+        <!-- Header End -->
+        <!-- Carousel Start -->
+        @await Component.InvokeAsync("_DefaultSliderComponentPartial")
+        <!-- Carousel End -->
+        <!-- Booking Start -->
+        @await Component.InvokeAsync("_DefaultReservationComponentPartial")
+        <!-- Booking End -->
+        <!-- About Start -->
+        @await Component.InvokeAsync("_DefaultAboutAsComponentPartial")
+        <!-- About End -->
+        <!-- Room Start -->
+        @await Component.InvokeAsync("_DefaultOurRoomComponentPartial")
+        <!-- Room End -->
+        <!-- Video Start -->
+        @await Component.InvokeAsync("_DefaultTrailerComponentPartial")
+        <!-- Video Start -->
+        <!-- Service Start -->
+        @await Component.InvokeAsync("_DefaultServiceComponentPartial")
+        <!-- Service End -->
+        <!-- Testimonial Start -->
+        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+        <!-- Testimonial End -->
+        <!-- Team Start -->
+        @await Component.InvokeAsync("_DefaultTeamComponentPartial")
+        <!-- Team End -->
+        <!-- Newsletter Start -->
+        @await Html.PartialAsync("_DefaultSubscribeComponentPartial")
+        <!-- Newsletter End -->
+        <!-- Footer Start -->
+        @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <!-- JavaScript Libraries -->
+    @await Component.InvokeAsync("_DefaultScriptsComponentPartial")
+    
+</body>
+
+</html>
