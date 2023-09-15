@@ -19,12 +19,12 @@ namespace HotelProject.WebUI.Controllers
             return View();
         }
         [HttpGet]
-        public PartialViewResult _DefaultSubscribeComponentPartial()
+        public PartialViewResult _DefaultSubscribePartialView()
         {
             return PartialView();
         }
         [HttpPost]
-        public async Task<IActionResult> _DefaultSubscribeComponentPartial(CreateSubscribeDto createSubscribeDto)
+        public async Task<IActionResult> _DefaultSubscribePartialView(CreateSubscribeDto createSubscribeDto)
         {
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createSubscribeDto);

@@ -1,4 +1,9 @@
-﻿@{
+﻿
+@{
+    Layout = null;
+}
+
+@{
     Layout = null;
 }
 
@@ -13,33 +18,15 @@
         <!-- Spinner End -->
         <!-- Header Start -->
         @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
+       
         <!-- Header End -->
-        <!-- Carousel Start -->
-        @await Component.InvokeAsync("_DefaultSliderComponentPartial")
-        <!-- Carousel End -->
+        @await Component.InvokeAsync("_BookingCoverComponentPartial")
         <!-- Booking Start -->
         @await Component.InvokeAsync("_DefaultReservationComponentPartial")
         <!-- Booking End -->
-        <!-- About Start -->
-        @await Component.InvokeAsync("_DefaultAboutAsComponentPartial")
-        <!-- About End -->
-        <!-- Room Start -->
-        @await Component.InvokeAsync("_DefaultOurRoomComponentPartial")
-        <!-- Room End -->
-        <!-- Video Start -->
-        @await Component.InvokeAsync("_DefaultTrailerComponentPartial")
-        <!-- Video Start -->
-        <!-- Service Start -->
-        @await Component.InvokeAsync("_DefaultServiceComponentPartial")
-        <!-- Service End -->
-        <!-- Testimonial Start -->
-        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
-        <!-- Testimonial End -->
-        <!-- Team Start -->
-        @await Component.InvokeAsync("_DefaultTeamComponentPartial")
-        <!-- Team End -->
+        @await Html.PartialAsync("/Views/Booking/_AddBookingPartialViews.cshtml")
         <!-- Newsletter Start -->
-        @await Html.PartialAsync("_DefaultSubscribePartialView")
+        @await Html.PartialAsync("/Views/Default/_DefaultSubscribePartialView.cshtml")
         <!-- Newsletter End -->
         <!-- Footer Start -->
         @await Component.InvokeAsync("_DefaultFooterComponentPartial")
@@ -49,7 +36,7 @@
     </div>
     <!-- JavaScript Libraries -->
     @await Component.InvokeAsync("_DefaultScriptsComponentPartial")
-    
+
 </body>
 
 </html>

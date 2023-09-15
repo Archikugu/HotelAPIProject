@@ -9,14 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddCors(opt =>
-{
-    opt.AddPolicy("HotelApiCors", opts =>
-    {
-        opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-    });
-});
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -41,8 +33,18 @@ builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IAboutDal, EfAboutDal>();
 builder.Services.AddScoped<IAboutService, AboutManager>();
 
-builder.Services.AddAutoMapper(typeof(HotelProject.WebAPI.Mapping.AutoMapperConfig));
+builder.Services.AddScoped<IBookingDal, EfBookingDal>();
+builder.Services.AddScoped<IBookingService, BookingManager>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("HotelApiCors", opts =>
+    {
+        opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 
 var app = builder.Build();
